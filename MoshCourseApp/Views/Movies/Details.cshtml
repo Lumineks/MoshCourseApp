@@ -1,0 +1,21 @@
+﻿@model MoshCourseApp.Models.Movie
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <h1>@Model.Name</h1>
+    <ul>
+        <li>Genre: @Model.Genre.Name</li>
+        <li>Release Date: @Model.ReleaseDate.Value.ToLongDateString()</li>
+        <li>Date Added: @Model.DateAdded.ToLongDateString()</li>
+        <li>Number In Stock: @Model.NumberInStock.Value</li>
+    </ul>
+</body>
+</html>

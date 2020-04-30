@@ -1,0 +1,22 @@
+﻿@model MoshCourseApp.Models.Customer
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <h1>@Model.Name</h1>
+    <ul>
+       <li>Membership Type: @Model.MembershipType.Name</li>
+        @if(Model.BirthDate.HasValue)
+        {
+            <li>Birthdate: @Model.BirthDate.Value.ToShortDateString()</li>
+        }
+    </ul>
+</body>
+</html>
+
